@@ -1,0 +1,35 @@
+a.social:hover {
+    transform: translateY(-7px);
+}
+
+a.social {
+  margin: 0 1rem;
+  transition: transform 250ms;
+  display: inline-block;
+}
+
+a.facebook {
+  color: #4968ad;
+}
+
+a.instagram {
+  color: black;
+}
+
+a.github{
+    color:purple;
+}
+
+a.linkedin{
+    color:#0A66C2;
+}
+
+a.email{
+    color: gray;
+    font-size: 400%;
+    
+}
+
+a:hover {
+ cursor:pointer;
+}

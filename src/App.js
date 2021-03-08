@@ -47,23 +47,32 @@ function App() {
       <BrowserRouter>
         <DocumentMeta {...meta}/>
         <div className="App disabledXBar" >
-          <CenteredTabs 
-            updateDisplay={updateDisplay}
-            history={history}
-          ></CenteredTabs>
+
+          <div style={{background: "#d9d9d9"}}>
+            <Grid className="titleNameGrid" container spacing={4} justify="center">
+
+              <Grid>
+                <Typography variant="h3" className="seth">
+                  Seth Lakstins
+                </Typography>
+              </Grid>
+              <Grid item>
+
+              <CenteredTabs 
+                updateDisplay={updateDisplay}
+                history={history}
+              ></CenteredTabs>
+              </Grid>
+            </Grid>
+          </div>
           <Grid className="titleNameGrid" container spacing={4} justify="center">
             <Grid item>
-              <Typography variant="h3" className={"seth " + (pageNum == 1 ? "hidden": "")}>
-                Seth Lakstins
-              </Typography>
             </Grid>
             <Grid item>
               <Typography variant="h1" className="title">
                 {pageNum == 1 && <div >Projects</div>}
                 {pageNum == 0 && <div>About me</div>}
               </Typography>
-            </Grid>
-            <Grid item style={{paddingRight: "450px"}}  >
             </Grid>
           </Grid>
           {pageNum == 1 && <Projects></Projects>}
@@ -78,7 +87,7 @@ function App() {
 
 const meta = {
   title: 'Seth Lakstins Portfolio',
-  description: 'description!',
+  description: 'A portfolio created with React',
   meta: {
     name: "viewport",
     content: "minimum-scale=1, initial-scale=1, width=device-width"
